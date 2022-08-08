@@ -3,194 +3,35 @@
 ###### No.Absen: 19
 ## modul-4
 ### View Blade Template
->Tugas 1 membuat view untuk project anda
+```VIEW```
 
-1) membuat folder dan file yang akan di isi
+```kemudian kita isi seperti dibawah ini.```
 
-Nama folder yang harus dibuat 
-- barang
-- kategori
-- layout
+![image](https://user-images.githubusercontent.com/109929695/183350988-64a06686-b9a8-43e0-992f-f3ae1a66de9e.png)
+![image](https://user-images.githubusercontent.com/109929695/183351049-59f5d825-a5bc-42ab-a86b-e9208cfd0457.png)
 
-Nama file yang harus dibuat
-- home.blade.php
-- index.blade.php
-- app.blade.php
+### langkah kedua 
+```kemudian kita membuat folder barang. dan didalam folder tsb kita membuat file home.blade.php```
 
-folder dan file-file nya menjadi satu seperti 
-contoh gambar yang terlihat seperti dibawah ini
+![image](https://user-images.githubusercontent.com/109929695/183351276-d1f02bd1-d089-4156-8f8f-657adcf92267.png)
 
->![image](https://user-images.githubusercontent.com/109929687/183340405-f5755f03-aa3d-4386-8698-2e92941a729e.png)
+```lalu kita masukkan coding seperti berikut.```
 
->Tugas 2 membuat layout dengan master template blade untuk project anda
+![image](https://user-images.githubusercontent.com/109929695/183351404-54fec5cf-38c4-4a5b-9fc0-b6a5fd96fc73.png)
 
-2) pada folder layout `file app.blade.php` kita mengambil **css dan js di bootstrap** ini linknya
-[Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+![image](https://user-images.githubusercontent.com/109929695/183351429-f5cc0d42-8587-4e9b-ad9e-d30f8022d84a.png)
 
->![image](https://user-images.githubusercontent.com/109929687/183342789-f6776591-ea33-4712-88ac-e847218de516.png)
+### langkah ketiga
+```selanjutnya kita membuat folder dan file seperti langkah kedua tetapi berbeda nama dan isinya.```
 
-gambar diatas adalah bagian bootstrap yang kita pakai sebagai css dengan menambahkan syntax sebagai berikut
-```
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-```
+![image](https://user-images.githubusercontent.com/109929695/183351608-6348a45f-3153-4a52-9eda-7ba0ead361c1.png)
 
-selanjutnya bagian js dengan menambahkan syntax sebagai berikut
-```
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-```
+![image](https://user-images.githubusercontent.com/109929695/183351658-ec235d3d-1b0e-4d19-a1c2-44ef9a7ed24f.png)
 
-Selanjutnya isi file `app.blade.php` dengan all codenya
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title')</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+dan hasil yangakan keluar di web seperti berikut.
 
-</head>
-<body>
-    <!-- untuk navbar -->
-    <div class="container">
-    <nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Penjualan</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/kategori">Kategori</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/barang">barang</a>
-        </li>
-        
-    </div>
-  </div>
-</nav>
-    </div>
-    <!-- content -->
-    <div class="container">
-    @yield('content')
-    </div>
+![image](https://user-images.githubusercontent.com/109929695/183351769-6548ab71-3476-48c1-874d-e65d8f47389a.png)
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-</body>
-</html>
-```
-saya tidak menggunakan cara yang saya jelaskan karena di bootstrap sudah ada yang mudah jadi saya tinggal copy dan paste saja
+```yang diatas untuk hasil barang dan dibawah ini adalah hasil untuk kategori.```
 
-Selanjutnya folder **barang** yang berisi file `home.blade.php`
-
-all codenya akan terlihat seperti dibawah ini karena kurang lebih saya memahami isi code dibawah
-```
-@extends('layout.app')
-
-@section('title')
-    Barang
-@endsection
-
-@section('content')
-<div class="mt-3">
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th width=5%>No</th>
-            <th>Nama</th>
-            <th width=15%>Kategori</th>
-            <th width=10%>QTY</th>
-            <th width=15%>Harga Beli</th>
-            <th width=15%>Harga Jual</th>
-            <th width=15%>Aksi</th>
-        </tr>
-    </thead>
-    
-    <tbody>
-        <tr>
-            <td>1.</td>
-            <td>meja</td>
-            <td>barang</td>
-            <td>12</td>
-            <td>Rp.50000</td>
-            <td>Rp.55000</td>
-            <td>Hapus | Edit</td>
-        </tr>
-        <tr>
-            <td>2.</td>
-            <td>kursi</td>
-            <td>barang</td>
-            <td>12</td>
-            <td>Rp.40000</td>
-            <td>Rp.45000</td>
-            <td>Hapus | Edit</td>
-        </tr>
-    </tbody>
-</div>
-</table>
-@endsection
-```
-
-Selanjutnya pada folder **kategori** file `index.blade.php` 
-
-all codenya akan ditampilkan di bawah ini
-```
-@extends('layout.app')
-
-@section('title')
-    Kategori
-@endsection
-
-@section('content')
-<div class="mt-3">
-    <table class="table table-striped">
-    <thead>
-        <tr>
-            <th width=5%>No</th>
-            <th>Nama</th>
-            <th width=15%>Kategori</th>
-            <th width=10%>QTY</th>
-            <th width=15%>Harga Beli</th>
-            <th width=15%>Harga Jual</th>
-            <th width=15%>Aksi</th>
-        </tr>
-    </thead>
-    
-    <tbody>
-        <tr>
-            <td>1.</td>
-            <td>ATK</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>Hapus | Edit</td>
-        </tr>
-        <tr>
-            <td>2.</td>
-            <td>Komputer</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>Hapus | Edit</td>
-        </tr><tr>
-            <td>3.</td>
-            <td>Accessoris</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>Hapus | Edit</td>
-        </tr>
-    </tbody>
-</div>
-</table>
-@endsection
-```
+![image](https://user-images.githubusercontent.com/109929695/183351865-84a1e821-46fb-43a1-9ee8-8789c7d538aa.png)
